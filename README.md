@@ -1,2 +1,2 @@
 # pythua
-Pythua is a python-to-lua communication software. 
+Pythua is a python-to-lua communication software. Incomplete.
