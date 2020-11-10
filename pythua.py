@@ -6,7 +6,12 @@ def send(text):
 
 def read():
   f = open("file.txt")
-  return f.read()
+  text = f.read()
+  f.close()
+  f.open("file.txt","w")
+  f.write("")
+  f.close()
+  return text
 
 def wait_until_signal(message):
   while True:
