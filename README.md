@@ -6,11 +6,11 @@ Pythua is a python-to-lua communication software.
     import pythua
     pythua.send("Hello World")
     pythua.read()
-    pythua.wait_until_signal()
+    pythua.wait_until_signal("Lua sent this")
 
 # Lua Side
 
     pta = require 'pythua'
     pta.readfile()
     pta.writefile("Hello World")
-    pta.wait_until_signal()
+    pta.wait_until_signal("Python sent this")
