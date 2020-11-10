@@ -10,6 +10,13 @@ function readfile()
   return text
 end
 
+function writefile(text)
+  file = io.open("file.txt", "w+")
+  io.output(file)
+  io.write(text)
+  io.close()
+end
+
 function wait_until_signal(text)
   while true do
     txt = readfile()
