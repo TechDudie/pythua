@@ -10,3 +10,12 @@ function cleanread()
   io.write("")
   io.close()
 end
+
+function wait_until_signal(text,file)
+  while true do
+    txt = readfile(file)
+    if txt == text
+      break
+    end
+  end
+end
