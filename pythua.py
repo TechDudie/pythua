@@ -7,3 +7,9 @@ def send(text):
 def read():
   f = open("file.txt")
   return f.read()
+
+def wait_until_signal(message):
+  while True:
+    if read() == message:
+      return
+  
