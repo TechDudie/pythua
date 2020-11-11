@@ -1,12 +1,13 @@
-function readfile()
+function readfile(erase)
   file = io.open("file.txt", "r")
   io.input(file)
   text = io.read()
   io.close()
-  file = io.open("file.txt", "w+")
-  io.output(file)
-  io.write("")
-  io.close()
+  if erase == true:
+    file = io.open("file.txt", "w+")
+    io.output(file)
+    io.write("")
+    io.close()
   return text
 end
 
@@ -19,9 +20,9 @@ end
 
 function wait_until_signal(text)
   while true do
-    txt = readfile()
-    if txt == text
+    if readfile(false) == text
       break
     end
   end
+  readfile(true)
 end
