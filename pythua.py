@@ -4,17 +4,19 @@ def send(text):
   f.close()
   return
 
-def read():
+def read(erase):
   f = open("file.txt")
   text = f.read()
   f.close()
-  f.open("file.txt","w")
-  f.write("")
-  f.close()
+  if erase == True:
+    f.open("file.txt","w")
+    f.write("")
+    f.close()
   return text
 
 def wait_until_signal(message):
   while True:
     if read() == message:
-      return
+      break
+  read(True)
   
